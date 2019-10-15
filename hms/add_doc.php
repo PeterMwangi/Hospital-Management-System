@@ -77,7 +77,7 @@
                                     Less Ten</option>
                                 <option value="more_than_10">Above Ten
                                 </option>
-                            </select><br>
+                            </select><br><br>
                             <label>Age: </label>
                             <input type="text" name="age" class="form-control"><br>
                             <input type="submit" class="btn btn-primary" name="add_doc" value="Register Doc">
