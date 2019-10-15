@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+//Simple HTML form for adding doctors into the system
+
 <?php include 'func.php' ?>
 <html lang="en">
 
