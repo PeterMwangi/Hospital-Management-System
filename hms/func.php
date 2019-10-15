@@ -27,7 +27,7 @@ if (isset($_POST['login_submit'])) {
     }
 }
 
-//An if statement that inputs patients data into the doctor appointment form.  
+//An if statement that inputs patients data into the doctor appointment form and table
 
 if (isset($_POST['pat_submit'])) {
     $fname = $_POST['fname'];
