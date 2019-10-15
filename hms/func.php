@@ -1,8 +1,11 @@
 <?php
+
+//session needs to start to keep the login details secure. 
 session_start();
 $conn = mysqli_connect("localhost", "root", "", "hmsdb");
 
 
+//A simple login verification which takes the username and password from the database and confirms if the data given is correct
 
 if (isset($_POST['login_submit'])) {
 
@@ -24,6 +27,8 @@ if (isset($_POST['login_submit'])) {
     }
 }
 
+//An if statement that inputs patients data into the doctor appointment form.  
+
 if (isset($_POST['pat_submit'])) {
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
@@ -37,6 +42,8 @@ if (isset($_POST['pat_submit'])) {
     $result = mysqli_query($conn, $query);
     header('Location: patients-details.php');
 }
+
+//A simple form to register users and staff into the system
 
 if (isset($_POST['reg_staff'])) {
     $fname = $_POST['fname'];
@@ -52,6 +59,8 @@ if (isset($_POST['reg_staff'])) {
 
 
 $result = null;
+
+//A function that displays patients details when their contact detail is shared on the search bar.
 
 function get_patient_details()
 {
@@ -83,6 +92,8 @@ function get_patient_details()
 }
 
 
+//A function that gets staff details when contact number is typed into the search bar
+
 function get_staff_details()
 {
     global $conn;
@@ -112,6 +123,8 @@ function get_staff_details()
     }
 }
 
+//A statement for updating payment status for a patient
+
 if (isset($_POST['update_data'])) {
 
     $contact = $_POST['contact'];
@@ -120,6 +133,8 @@ if (isset($_POST['update_data'])) {
     $result = mysqli_query($conn, $query);
     header('Location: patients-details.php');
 }
+
+//A select option to display doctors name in the appointment form
 
 function display_docs()
 {
@@ -135,6 +150,8 @@ function display_docs()
     }
 }
 
+//A statement for adding doctor into the system
+
 if (isset($_POST['add_doc'])) {
 
     $name = $_POST['name'];
@@ -148,6 +165,8 @@ if (isset($_POST['add_doc'])) {
     $result = mysqli_query($conn, $query);
     header('Location: admin-panel.php');
 }
+
+//For using sessions we echo the admin panel at function (display_admin_panel) position
 
 function display_admin_panel()
 {
