@@ -240,7 +240,7 @@ function display_admin_panel()
                                 <label>Doctor Appointment: </label>
                                 <!-- <input type="datetime" name="contact" class="form-control"><br> -->
                                 <select name="docapp" class="form-control">
-                                    <?php display_docs(); ?>
+                                    <?php display_docs(); ?> //How do I call this function and its inside an echo " "
     
                                 </select><br>
                                 <label>Date: </label>
