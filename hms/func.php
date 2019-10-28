@@ -251,7 +251,7 @@ function display_admin_panel()
                                     <option value="Pay Later">Pay Later</option>
                                 </select><br>
     
-    
+    //Button
     
                                 <input type="submit" class="btn btn-primary" name="pat_submit" value="Book Appointment">
                             </form>
