@@ -82,6 +82,8 @@
                             <input type="text" name="age" class="form-control"><br>
                             <input type="submit" class="btn btn-primary" name="add_doc" value="Register Doc">
                         </form>
+                        
+                        //Will update the form verification to use jquery for form validation
 
 
                     </div>
